@@ -16,7 +16,7 @@ _For an alternative way_, follow the [Manual Installation](./docs/ordhook-instal
 
 ## Using Ordhook to deliver payloads to an observer
 
-1. Try out ordhook commands `scan` and `service` which allow for historical and ongoing observation, respectively. In terminal:
+Try out ordhook commands `scan` and `service` which allow for historical and ongoing observation, respectively. In terminal:
 
 ```bash
 ordhook scan blocks 784726 784727 --mainnet
@@ -29,9 +29,13 @@ Inscription 6fb976ab49dcec017f1e201e84395983204ae1a7c2abf7ced0a85d692e442799i0 r
 Inscription 26482871f33f1051f450f2da9af275794c0b5f1c61ebf35e4467fb42c2813403i0 revealed at block #767753 (ordinal_number 727624168684699, inscription_number 1)
 ```
 
-2. In this repo is a simple web server in the `/my_ordinal_app/` folder's [`server.js`](/my_ordinal_app/server.js) script. After running `npm install` inside that folder to download project dependencies, you can start the server with `node server.js`
+To get started running the API, run the following commands:
 
-3. You can now deliver ordhook `scan` and `service` payloads to the port exposes by our local web server. The `my_ordinal_app` Node.js script is setup to receive payloads at `http://localhost:3000/api/events`
+```bash
+yarn workspace brc20-api install && yarn workspace brc20-api start
+```
+
+3. You can now deliver ordhook `scan` and `service` payloads to the port exposed by our local web server, `http://localhost:3000/api/events`
 
 Here we will scan historical blocks and post inscription data to the URL specified (here, a local web server):
 

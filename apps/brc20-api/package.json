@@ -11,7 +11,6 @@
     "serve": "node ./dist/server.js"
   },
   "dependencies": {
-    "body-parser": "^1.20.2",
     "express": "^4.18.2",
     "file-type": "^18.5.0"
   },

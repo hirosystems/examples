@@ -1,5 +1,4 @@
 import express, { Express, Request, Response } from "express";
-import bodyParser from "body-parser";
 
 // Create a new express application
 const app: Express = express();
@@ -11,10 +10,8 @@ const PORT: number = 3000;
 // We set a limit of 5mb to handle large payloads that may come with the POST requests.
 // This is necessary to prevent potential issues with payload size exceeding the default limit.
 app.use(
-  bodyParser.json({
-    limit: "5mb",
-  }),
-  express.urlencoded({ limit: "5mb" })
+  express.json({ limit: "5mb" }),
+  express.urlencoded({ limit: "5mb", extended: true })
 );
 
 function hexToUtf8(hex: string) {
@@ -70,7 +67,7 @@ app.post("/api/events", async (req: Request, res: Response) => {
     });
   });
 
-  res.status(200).send({ message: "SNS added" });
+  res.status(200).send({ message: "BRC-20 added" });
 });
 
 app.get("/events", (req, res) => {

@@ -51,7 +51,7 @@ ordhook service start --post-to=http://localhost:3000/api/events --config-path=.
 
 ## Create a custom view of BRC-20 inscriptions with JS
 
-You can extract custom, finely tailored views of ordinals inscription data by working with ordhook payloads. If you look at the [`src/server.ts`](/src/server.ts) script, you can see how the inscription data is delivered and how to parse it.
+You can extract custom, finely tailored views of ordinals inscription data by working with ordhook payloads. If you look at the [`src/server.ts`](./src/server.ts) script, you can see how the inscription data is delivered and how to parse it.
 
 Here we are simply displaying the results in the browser, but you could just as easily populate a database, or trigger another service.
 

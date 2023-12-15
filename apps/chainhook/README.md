@@ -1,7 +1,7 @@
 # Example Server for parsing Chainhook `payload` data
 
-```
-const express = require('express');
+```typescript
+const express = require("express");
 const app = express();
 app.use(express.json());
 

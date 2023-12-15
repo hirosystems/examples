@@ -1,0 +1,24 @@
+{
+  "name": "chainhook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "/-/",
+  "license": "MIT",
+  "scripts": {
+    "setup": "chmod +x ./scripts/* && yarn install",
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts",
+    "build": "tsc",
+    "serve": "node ./dist/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "file-type": "^18.5.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.4.7",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}

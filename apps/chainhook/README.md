@@ -22,7 +22,7 @@ app.post("/api/events", async (req, res) => {
   });
 
   // Send a response back to Chainhook to acknowledge receipt of the event
-  res.status(200).send({ message: "Proposal added!" });
+  res.status(200).send({ message: "Event triggered!" });
 });
 
 app.listen(3000, () => {
